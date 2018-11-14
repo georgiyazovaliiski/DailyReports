@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cities>
+  <city name="Barcelona">
+    <departments>
+      <department name="Health">
+        <employee>Else Taverner</employee>
+        <turnover>10460.78</turnover>
+      </department>
+      <department name="Books">
+        <employee>Bibbie Indruch</employee>
+        <turnover>12626.1</turnover>
+      </department>
+      <department name="Tools">
+        <employee>Floyd Cammell</employee>
+        <turnover>19686.71</turnover>
+      </department>
+      <department name="Beauty">
+        <employee>Concordia Juden</employee>
+        <turnover>12720</turnover>
+      </department>
+    </departments>
+  </city>
+  <city name="Toledo">
+    <departments>
+      <department name="Games">
+        <employee>Richmond Betun</employee>
+        <turnover>14983.96</turnover>
+      </department>
+      <department name="Industrial">
+        <employee>Renae Cleugher</employee>
+        <turnover>19530.34</turnover>
+      </department>
+      <department name="Grocery">
+        <employee>Birk Dowsett</employee>
+        <turnover>9696.23</turnover>
+      </department>
+      <department name="Automotive">
+        <employee>Sibilla Schoroder</employee>
+        <turnover>5687.73</turnover>
+      </department>
+    </departments>
+  </city>
+  <city name="Zaragoza">
+    <departments>
+      <department name="Garden">
+        <employee>Jamil Youd</employee>
+        <turnover>14198.94</turnover>
+      </department>
+      <department name="Music">
+        <employee>Davey Doblin</employee>
+        <turnover>7817.02</turnover>
+      </department>
+      <department name="Toys">
+        <employee>Marcelia Benjefield</employee>
+        <turnover>16643.26</turnover>
+      </department>
+      <department name="Movies">
+        <employee>Mame Mac Geaney</employee>
+        <turnover>9167.67</turnover>
+      </department>
+    </departments>
+  </city>
+  <city name="Murcia">
+    <departments>
+      <department name="Computers">
+        <employee>Quintina Abrahams</employee>
+        <turnover>14306.06</turnover>
+      </department>
+      <department name="Electronics">
+        <employee>Rolph Holby</employee>
+        <turnover>18060.55</turnover>
+      </department>
+      <department name="Kids">
+        <employee>Crin Burlay</employee>
+        <turnover>10855.1</turnover>
+      </department>
+      <department name="Sports">
+        <employee>Janet Cotes</employee>
+        <turnover>4772.3</turnover>
+      </department>
+    </departments>
+  </city>
+  <city name="Valladolid">
+    <departments>
+      <department name="Baby">
+        <employee>Anitra Longden</employee>
+        <turnover>6714.66</turnover>
+      </department>
+      <department name="Home">
+        <employee>Norby Arling</employee>
+        <turnover>19972.76</turnover>
+      </department>
+      <department name="Jewelery">
+        <employee>Hal Jakaway</employee>
+        <turnover>5660.17</turnover>
+      </department>
+      <department name="Clothing">
+        <employee>Jennifer Doche</employee>
+        <turnover>10666.51</turnover>
+      </department>
+    </departments>
+  </city>
+  <city name="Santiago de Compostela">
+    <departments>
+      <department name="Health">
+        <employee>Bowie Drewitt</employee>
+        <turnover>15567.04</turnover>
+      </department>
+      <department name="Books">
+        <employee>Lucinda Tenwick</employee>
+        <turnover>10697.38</turnover>
+      </department>
+      <department name="Tools">
+        <employee>Prentice Coram</employee>
+        <turnover>4111.53</turnover>
+      </department>
+      <department name="Beauty">
+        <employee>Donnell Rockhill</employee>
+        <turnover>15597.97</turnover>
+      </department>
+    </departments>
+  </city>
+  <city name="Mérida">
+    <departments>
+      <department name="Games">
+        <employee>Randolph Coil</employee>
+        <turnover>9368.86</turnover>
+      </department>
+      <department name="Industrial">
+        <employee>Symon Handke</employee>
+        <turnover>19259.02</turnover>
+      </department>
+      <department name="Grocery">
+        <employee>Paxon Glassford</employee>
+        <turnover>12250.29</turnover>
+      </department>
+      <department name="Automotive">
+        <employee>Arne Fannin</employee>
+        <turnover>7972</turnover>
+      </department>
+    </departments>
+  </city>
+  <city name="Santa Cruz de Tenerife">
+    <departments>
+      <department name="Garden">
+        <employee>Lebbie Stanning</employee>
+        <turnover>18474.72</turnover>
+      </department>
+      <department name="Music">
+        <employee>Benjie Trim</employee>
+        <turnover>12430.7</turnover>
+      </department>
+      <department name="Toys">
+        <employee>Axel McPartling</employee>
+        <turnover>19294.65</turnover>
+      </department>
+      <department name="Movies">
+        <employee>Muriel Pady</employee>
+        <turnover>14022.99</turnover>
+      </department>
+    </departments>
+  </city>
+  <city name="Seville">
+    <departments>
+      <department name="Computers">
+        <employee>Austin Connett</employee>
+        <turnover>12120.37</turnover>
+      </department>
+      <department name="Electronics">
+        <employee>Roseanna Tucsell</employee>
+        <turnover>8003.18</turnover>
+      </department>
+      <department name="Kids">
+        <employee>Elvin Nekrews</employee>
+        <turnover>19875.48</turnover>
+      </department>
+      <department name="Sports">
+        <employee>Albertine Goulborn</employee>
+        <turnover>7068.67</turnover>
+      </department>
+    </departments>
+  </city>
+  <city name="Pamplona">
+    <departments>
+      <department name="Baby">
+        <employee>Cyrill Leatherbarrow</employee>
+        <turnover>17443.42</turnover>
+      </department>
+      <department name="Home">
+        <employee>Berni Ellsworthe</employee>
+        <turnover>19135.23</turnover>
+      </department>
+      <department name="Jewelery">
+        <employee>Gennifer Tarburn</employee>
+        <turnover>19083.69</turnover>
+      </department>
+      <department name="Clothing">
+        <employee>Armin Dampier</employee>
+        <turnover>7279.75</turnover>
+      </department>
+    </departments>
+  </city>
+</cities>

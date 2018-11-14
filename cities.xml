@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cities>
+    <city name="New1">
+        <departments>
+            <department name="Games">
+                <employee>Georgi Yazovaliyski</employee>
+                <turnover>3.4566</turnover>
+            </department>
+        </departments>
+    </city>
+    <city name="New2">
+        <departments>
+            <department name="Games">
+                <employee>Georgi Yazovaliyski</employee>
+                <turnover>3.4566</turnover>
+            </department>
+        </departments>
+    </city>
+</cities>
