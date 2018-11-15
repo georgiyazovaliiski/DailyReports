@@ -1,4 +1,4 @@
-package models;
+package models.reportcomponents;
 
 import javax.xml.bind.annotation.*;
 import java.util.List;
