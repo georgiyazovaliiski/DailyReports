@@ -1,61 +1,64 @@
-
-import models.reportcomponents.Company;
+import models.DBModels.Company;
 import models.reports.BaseDailyReport;
-import parsers.BaseReportParser;
-import parsers.CSVReportParser;
-import parsers.XMLReportParser;
+import models.reports.CSVDailyReport;
+import models.reports.XMLDailyReport;
 
 import javax.xml.bind.JAXBException;
-import java.io.File;
 import java.io.IOException;
-import java.time.LocalDate;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.lang.reflect.Field;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class Engine {
-    public void Run() throws JAXBException, IOException {
-        File folder = new File("daily-reports/");
-        File[] listOfFiles = folder.listFiles();
+    private List<Field> getClassFields(List<Field> fields, Class<?> tClass) {
+        fields.addAll(Arrays.asList(tClass.getDeclaredFields()));
 
-        for (int i = 0; i < listOfFiles.length; i++) {
-            if (listOfFiles[i].isFile()) {
-                String FileName = listOfFiles[i].getName();
-                String Extension = FileName.split("\\.")[1];
-                Pattern pattern = Pattern.compile("^(([0-9]+-){2}[0-9]+-.+\\.[a-zA-Z]+)$");
-                Pattern patternForDates = Pattern.compile("([0-9]+-){2}([0-9]+){2}");
+        if (tClass.getSuperclass() != null)
+            getClassFields(fields, tClass.getSuperclass());
 
-                Matcher matcherForDate = patternForDates.matcher(FileName);
+        return fields;
+    }
 
-                Matcher matcher = pattern.matcher(FileName);
-                while (matcher.find()) {
-                    if(matcher.group()!=null){
-                        while (matcherForDate.find()) {
-                            String[] params = FileName.split("\\.")[0].split("-");
-                            String CompanyName = params[params.length-1];
-                            String Date = matcherForDate.group();
+    public void Run() throws JAXBException, IOException, SQLException, ClassNotFoundException {
+        Connector connector = new Connector();
+        connector.createConnection();
+        Connection con = connector.getConnection();
 
-                            BaseDailyReport dailyReport;
+        QueryBuilder builder = new QueryBuilder();
+        TableChecker checker = new TableChecker();
 
-                            if(Extension.equals("xml")){ //If the file is .XML
-                                XMLReportParser parser = new XMLReportParser();
-                                dailyReport = parser.Report(FileName);
-                                dailyReport.setCompany(new Company(CompanyName));
-                                dailyReport.setDate(LocalDate.parse(Date));
-                            }
-                            else if(Extension.equals("csv")){ //If the file is .CSV
-                                CSVReportParser parser = new CSVReportParser();
-                                dailyReport = parser.Report(FileName);
-                                dailyReport.setCompany(new Company(CompanyName));
-                                dailyReport.setDate(LocalDate.parse(Date));
-                            }
-                        }
-                        break;
-                    }
+        if(!checker.check(con, "companies")) // CHECKS IF TABLE EXISTS
+        {
+            PreparedStatement stmnt = con.prepareStatement(builder.createCompanies());
+            stmnt.execute();
+        }
+
+        FileParser fileParser = new FileParser();
+        List<BaseDailyReport> reports = fileParser.ParseList();
+        for (BaseDailyReport report : reports) {
+            if(!checker.checkForCompany(con,report.getCompany().getCompanyPrefix())){
+                PreparedStatement stmnt = con.prepareStatement(builder.insert("companies", getClassFields(new ArrayList<>(), Company.class)).getQuery());
+
+                    stmnt.setString(1,report.getCompany().getCompanyPrefix());
+                    stmnt.setString(2,report.getCompany().getName());
+                    stmnt.execute();
+
+                    stmnt = con.prepareStatement(builder.createCities(report.getCompany().getCompanyPrefix()));
+                    stmnt.execute();
+
+                    stmnt = con.prepareStatement(builder.createEmployees(report.getCompany().getCompanyPrefix()));
+                    stmnt.execute();
+
+                    stmnt = con.prepareStatement(builder.createReports(report.getCompany().getCompanyPrefix()));
+                    stmnt.execute();
+
+                if(report.getClass() == XMLDailyReport.class) {
+                    stmnt = con.prepareStatement(builder.createDepartments(report.getCompany().getCompanyPrefix()));
+                    stmnt.execute();
                 }
-
-                //System.out.println("Extension " + Extension);
-            } else if (listOfFiles[i].isDirectory()) {
-                System.out.println("Directory " + listOfFiles[i].getName());
             }
         }
     }

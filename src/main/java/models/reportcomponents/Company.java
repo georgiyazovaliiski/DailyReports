@@ -7,8 +7,19 @@ import java.util.List;
 public class Company {
     private String Name;
 
-    public Company(String name) {
+    private String CompanyPrefix;
+
+    public Company(String name, String companyPrefix) {
         this.Name = name;
+        this.CompanyPrefix = companyPrefix;
+    }
+
+    public String getCompanyPrefix() {
+        return CompanyPrefix;
+    }
+
+    public void setCompanyPrefix(String companyPrefix) {
+        CompanyPrefix = companyPrefix;
     }
 
     public String getName() {
