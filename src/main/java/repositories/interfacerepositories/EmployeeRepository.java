@@ -1,9 +1,13 @@
 package repositories.interfacerepositories;
 
-import models.DBModels.City;
 import models.DBModels.Department;
+import models.DBModels.Employee;
 import repositories.baserepositories.BaseRepository;
 
-public interface DepartmentRepository extends BaseRepository<Department> {
+import java.sql.SQLException;
+import java.util.Optional;
+
+public interface EmployeeRepository extends BaseRepository<Employee> {
     //custom functions
+    Optional<Integer> checkByName(String name) throws SQLException, IllegalAccessException;
 }

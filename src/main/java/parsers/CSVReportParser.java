@@ -36,6 +36,6 @@ public class CSVReportParser extends BaseReportParser {
         }
 
         csvDailyReport.setEmployees(employees);
-        return new CSVDailyReport();
+        return csvDailyReport;
     }
 }

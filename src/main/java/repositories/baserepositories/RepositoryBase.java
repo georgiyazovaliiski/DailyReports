@@ -1,9 +1,10 @@
-package repositories;
+package repositories.baserepositories;
 
 import annotation.Table;
 import connectionResources.Connector;
 import connectionResources.QueryBuilder;
 
+import java.beans.PropertyVetoException;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -20,9 +21,10 @@ import models.DBModels.BaseEntity;
 
 public abstract class RepositoryBase<T>{
     private Connector connector;
-    private Connection con;
-    private QueryBuilder builder;
-    private Class<T> typeParameterClass;
+    protected Connection con;
+    protected QueryBuilder builder;
+    protected Class<T> typeParameterClass;
+    protected String tableName;
 
 
     public RepositoryBase() throws SQLException, NoSuchMethodException, IOException, ClassNotFoundException, IllegalAccessException, InstantiationException {
@@ -32,6 +34,12 @@ public abstract class RepositoryBase<T>{
         this.builder = new QueryBuilder();
         this.typeParameterClass = (Class<T>) ((Class)((ParameterizedType)this.getClass().
                 getGenericSuperclass()).getActualTypeArguments()[0]);
+        this.tableName = this.typeParameterClass.getAnnotation(Table.class).name();
+        //System.out.println("FINAL: " + this.tableName);
+    }
+
+    public void setConnection(Connection con){
+        this.con = con;
     }
 
     protected Connector connector() throws SQLException, IOException, ClassNotFoundException {
@@ -46,15 +54,10 @@ public abstract class RepositoryBase<T>{
         }
     }
 
-    /*public void Add(T Entity){
-        QueryInfo query = builder.insert(Entity.getClass().getAnnotation(Table.class).value(), getClassFields(new ArrayList<Field>(),Entity.getClass()));
-        System.out.println(query.getQuery());
-    }*/
-
     public Optional<T> get(int id) throws SQLException, NoSuchMethodException, IllegalAccessException, IOException, ClassNotFoundException, InstantiationException, NoSuchFieldException, InvocationTargetException, NoSuchMethodException {
-        String tableName = typeParameterClass.getAnnotation(Table.class).name();
+        String tableName = this.tableName;
         QueryInfo query = builder.select(new String[]{"*"},tableName,"Id");
-
+        //System.out.println(query.getQuery());
         PreparedStatement stmnt = con.prepareStatement(query.getQuery(),
                 Statement.RETURN_GENERATED_KEYS);
 
@@ -78,12 +81,36 @@ public abstract class RepositoryBase<T>{
     }
 
     public Optional<List<T>> get() throws SQLException, IOException, ClassNotFoundException{
-        System.out.println("Not implemented yet");
+        QueryInfo query = builder.select(new String[]{"*"},tableName);
+
+        System.out.println(query.getQuery());
         return null;
     }
 
     public Optional<Integer> insert(T Entity) throws SQLException, IOException, ClassNotFoundException, IllegalAccessException {
-        QueryInfo query = builder.insert(Entity.getClass().getAnnotation(Table.class).name(), getClassFields(new ArrayList<Field>(),Entity.getClass()));
+
+
+        List<Field> fields = getClassFields(new ArrayList<Field>(),Entity.getClass());
+
+        System.out.println("FIELD LIST SIZE: " + fields.size());
+
+        for (int i = 0; i < fields.size(); i++) {
+            Field field = fields.get(i);
+            field.setAccessible(true);
+            if(field.getName().contains("department")){
+                System.out.println("FIELDCHE:" + field.get(Entity).toString());
+                if(field.get(Entity).toString().equals("0") || field.get(Entity).toString().equals(0)){
+                    fields.remove(field);
+                    i--;
+                }
+            }
+        }
+        System.out.println("FIELD LIST SIZE AFTER: " + fields.size());
+
+        QueryInfo query = builder.insert(
+                this.tableName,
+                fields
+        );
 
         PreparedStatement stmnt = con.prepareStatement(query.getQuery(),
                 Statement.RETURN_GENERATED_KEYS);
@@ -92,9 +119,12 @@ public abstract class RepositoryBase<T>{
         for (Field field : Entity.getClass().getDeclaredFields()) {
             String fieldName = field.getName();
             field.setAccessible(true);
-            stmnt.setString(counter,field.get(Entity).toString());
-            counter++;
+            if(fields.contains(field)) {
+                stmnt.setString(counter, field.get(Entity).toString());
+                counter++;
+            }
         }
+        System.out.println("TUK! : " + stmnt);
         boolean executed = stmnt.execute();
 
         ResultSet rs = stmnt.getGeneratedKeys();
@@ -108,7 +138,7 @@ public abstract class RepositoryBase<T>{
         return result;
     }
 
-    public void update(T Entity) throws SQLException, IOException, ClassNotFoundException, IllegalAccessException, NoSuchFieldException {
+    public void update(T Entity) throws SQLException, NoSuchFieldException, IOException, ClassNotFoundException, IllegalAccessException, NoSuchFieldException {
         List<Field> fields = new ArrayList<>();
         getClassFields(fields,typeParameterClass);
         List<String> fieldNames = new ArrayList<>();
@@ -117,7 +147,7 @@ public abstract class RepositoryBase<T>{
         }
         String[] names = new String[fieldNames.size()];
         fieldNames.toArray(names);
-        QueryInfo query = this.builder.update(names,Entity.getClass().getAnnotation(Table.class).name(),"id");
+        QueryInfo query = this.builder.update(names,this.tableName,"id");
 
         PreparedStatement stmnt = con.prepareStatement(query.getQuery(),
                 Statement.RETURN_GENERATED_KEYS);
@@ -141,7 +171,7 @@ public abstract class RepositoryBase<T>{
         //System.out.println(stmnt);
 
         if(stmnt.execute()){
-            System.out.println("Updated successfully!");
+            //System.out.println("Updated successfully!");
         };
     }
 
@@ -149,7 +179,7 @@ public abstract class RepositoryBase<T>{
         System.out.println("Not implemented yet");
     }
 
-    private List<Field> getClassFields(List<Field> fields, Class<?> tClass) {
+    protected List<Field> getClassFields(List<Field> fields, Class<?> tClass) {
         fields.addAll(Arrays.asList(tClass.getDeclaredFields()));
 
         if (tClass.getSuperclass() != null)

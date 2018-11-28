@@ -6,7 +6,7 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-public @interface table_name {
-    public String value() default "";
+public @interface Table {
+    public String name() default "";
 }
 

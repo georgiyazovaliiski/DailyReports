@@ -1,3 +1,5 @@
+package connectionResources;
+
 import java.util.Map;
 
 public class QueryInfo {

@@ -1,3 +1,5 @@
+import connectionResources.QueryBuilder;
+
 import java.sql.*;
 
 public class TableChecker {
