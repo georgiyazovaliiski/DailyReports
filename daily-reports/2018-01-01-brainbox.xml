@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cities>
+  <city name="Munich">
+    <departments>
+      <department name="Health">
+        <employee>Hope Hammon</employee>
+        <turnover>9700.12</turnover>
+      </department>
+      <department name="Books">
+        <employee>Berti Rouse</employee>
+        <turnover>14757.2</turnover>
+      </department>
+      <department name="Tools">
+        <employee>Mikol Kneesha</employee>
+        <turnover>13686.23</turnover>
+      </department>
+      <department name="Beauty">
+        <employee>Roley Bethel</employee>
+        <turnover>11083.09</turnover>
+      </department>
+    </departments>
+  </city>
+  <city name="Potsdam">
+    <departments>
+      <department name="Games">
+        <employee>Phineas Collins</employee>
+        <turnover>13641.56</turnover>
+      </department>
+      <department name="Industrial">
+        <employee>Desi Dovidaitis</employee>
+        <turnover>7701.54</turnover>
+      </department>
+      <department name="Grocery">
+        <employee>Theressa Caton</employee>
+        <turnover>8491.88</turnover>
+      </department>
+      <department name="Automotive">
+        <employee>Gina Matusiak</employee>
+        <turnover>18950.19</turnover>
+      </department>
+    </departments>
+  </city>
+  <city name="Kiel">
+    <departments>
+      <department name="Garden">
+        <employee>Salli Bernakiewicz</employee>
+        <turnover>10363.5</turnover>
+      </department>
+      <department name="Music">
+        <employee>Roxine Howett</employee>
+        <turnover>18876.23</turnover>
+      </department>
+      <department name="Toys">
+        <employee>Fidel Grinter</employee>
+        <turnover>7192.5</turnover>
+      </department>
+      <department name="Movies">
+        <employee>Katleen Kernoghan</employee>
+        <turnover>7948.24</turnover>
+      </department>
+    </departments>
+  </city>
+  <city name="Wiesbaden">
+    <departments>
+      <department name="Computers">
+        <employee>Erinna Tweedell</employee>
+        <turnover>14958.21</turnover>
+      </department>
+      <department name="Electronics">
+        <employee>Chrisse Morican</employee>
+        <turnover>12105.21</turnover>
+      </department>
+      <department name="Kids">
+        <employee>Athena Hannay</employee>
+        <turnover>19742.04</turnover>
+      </department>
+      <department name="Sports">
+        <employee>Daniela Adamides</employee>
+        <turnover>4389.82</turnover>
+      </department>
+    </departments>
+  </city>
+  <city name="Magdeburg">
+    <departments>
+      <department name="Baby">
+        <employee>Adriena Cutmare</employee>
+        <turnover>15582.62</turnover>
+      </department>
+      <department name="Home">
+        <employee>Mable Brobak</employee>
+        <turnover>15172.35</turnover>
+      </department>
+      <department name="Jewelery">
+        <employee>Tierney Barrasse</employee>
+        <turnover>7735.41</turnover>
+      </department>
+      <department name="Clothing">
+        <employee>Bryanty Ropcke</employee>
+        <turnover>8435.42</turnover>
+      </department>
+    </departments>
+  </city>
+  <city name="Bremen">
+    <departments>
+      <department name="Health">
+        <employee>Burg Kirwan</employee>
+        <turnover>12335.66</turnover>
+      </department>
+      <department name="Books">
+        <employee>Georges Beceril</employee>
+        <turnover>16536.76</turnover>
+      </department>
+      <department name="Tools">
+        <employee>Riccardo Canto</employee>
+        <turnover>7171.61</turnover>
+      </department>
+      <department name="Beauty">
+        <employee>Nate Hounsom</employee>
+        <turnover>4904.66</turnover>
+      </department>
+    </departments>
+  </city>
+  <city name="Hannover">
+    <departments>
+      <department name="Games">
+        <employee>Armand Dilgarno</employee>
+        <turnover>17742.15</turnover>
+      </department>
+      <department name="Industrial">
+        <employee>Armand Dilgarno</employee>
+        <turnover>13737.94</turnover>
+      </department>
+      <department name="Grocery">
+        <employee>Niven Bennie</employee>
+        <turnover>4633.8</turnover>
+      </department>
+      <department name="Automotive">
+        <employee>Estrellita Nice</employee>
+        <turnover>7178.38</turnover>
+      </department>
+    </departments>
+  </city>
+  <city name="Düsseldorf">
+    <departments>
+      <department name="Garden">
+        <employee>Marlin Mangion</employee>
+        <turnover>6420.95</turnover>
+      </department>
+      <department name="Music">
+        <employee>Beatrisa Chatres</employee>
+        <turnover>4786.72</turnover>
+      </department>
+      <department name="Toys">
+        <employee>Therese Chapiro</employee>
+        <turnover>14815.3</turnover>
+      </department>
+      <department name="Movies">
+        <employee>Beltran Dikle</employee>
+        <turnover>4998.68</turnover>
+      </department>
+    </departments>
+  </city>
+  <city name="Saarbrücken">
+    <departments>
+      <department name="Computers">
+        <employee>Fay Hastler</employee>
+        <turnover>14598.57</turnover>
+      </department>
+      <department name="Electronics">
+        <employee>Jeanie Rennox</employee>
+        <turnover>13786.62</turnover>
+      </department>
+      <department name="Kids">
+        <employee>Dolf Kippling</employee>
+        <turnover>4917.31</turnover>
+      </department>
+      <department name="Sports">
+        <employee>Alain Rabbe</employee>
+        <turnover>6805.87</turnover>
+      </department>
+    </departments>
+  </city>
+  <city name="Schwerin">
+    <departments>
+      <department name="Baby">
+        <employee>Emmi Haggidon</employee>
+        <turnover>8709.46</turnover>
+      </department>
+      <department name="Home">
+        <employee>Byrle Pordall</employee>
+        <turnover>16334.1</turnover>
+      </department>
+      <department name="Jewelery">
+        <employee>Clarita Chedzoy</employee>
+        <turnover>4785.58</turnover>
+      </department>
+      <department name="Clothing">
+        <employee>Kalindi Hovell</employee>
+        <turnover>7065.38</turnover>
+      </department>
+    </departments>
+  </city>
+</cities>

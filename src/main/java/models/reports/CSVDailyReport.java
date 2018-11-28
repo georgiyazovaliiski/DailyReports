@@ -1,31 +1,17 @@
-package models;
+package models.reports;
+
+import models.reportcomponents.Employee;
+
+import java.util.List;
 
 public class CSVDailyReport extends BaseDailyReport{
-    private String City;
-    private String Employee;
-    private double TurnOver;
+    private List<Employee> Employees;
 
-    public String getCity() {
-        return City;
+    public List<Employee> getEmployees() {
+        return Employees;
     }
 
-    public void setCity(String city) {
-        City = city;
-    }
-
-    public String getEmployee() {
-        return Employee;
-    }
-
-    public void setEmployee(String employee) {
-        Employee = employee;
-    }
-
-    public double getTurnOver() {
-        return TurnOver;
-    }
-
-    public void setTurnOver(double turnOver) {
-        TurnOver = turnOver;
+    public void setEmployees(List<Employee> employees) {
+        Employees = employees;
     }
 }
