@@ -1,4 +1,6 @@
 
+import com.beust.jcommander.JCommander;
+import com.beust.jcommander.Parameter;
 import parsers.XMLReportParser;
 
 import javax.xml.bind.JAXBContext;

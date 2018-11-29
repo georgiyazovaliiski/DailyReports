@@ -21,27 +21,22 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
 import java.time.LocalDate;
+import java.time.Year;
+import java.time.YearMonth;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 
-class Settings {
-    @Parameter(names = "-action", description = "Action to be done", required = true)
-    private String action;
 
-    @Parameter(names = "-url", description = "File Url", required = true)
-    private String fileURL;
-
-    @Parameter(names = "-month", description = "Number of month (1-12) for timesheet", required = true)
-    private Integer month;
-
-    @Parameter(names = "-year", description = "Year", required = true)
-    private Integer year;
-
-}
 
 public class Engine {
+    @Parameter(names = "-import", description = "Reads file/folder location and imports reports to DB", required = false)
+    private String importFiles = "";
+
+    @Parameter(names = "-export", description = "Exports reports for given period")
+    private String exportReports = "";
+
     private List<Field> getClassFields(List<Field> fields, Class<?> tClass) {
         fields.addAll(Arrays.asList(tClass.getDeclaredFields()));
 
@@ -52,11 +47,6 @@ public class Engine {
     }
 
     public void Run(String[] args) throws JAXBException, NoSuchMethodException, NoSuchFieldException, InvocationTargetException, IOException, SQLException, ClassNotFoundException, IllegalAccessException, InstantiationException, PropertyVetoException {
-        //Settings s = new Settings();
-
-        //JCommander commander = new JCommander(s, args);
-
-
         Connector connector = new Connector();
         connector.createConnection();
         Connection con = connector.getConnection();
@@ -70,19 +60,103 @@ public class Engine {
             stmnt.execute();
         }
 
-        //ReportService service = new ReportServiceImpl("brainbox", con);
-        //List<ReportPOJO> reports = service.getByPeriod(LocalDate.parse("2017-01-02"),LocalDate.parse("2018-01-05")).get();
+        JCommander.newBuilder()
+                .addObject(this)
+                .build()
+                .parse(args);
 
-        //RUN COMMAND LINER
+        if(!importFiles.equals("")){
+            System.out.println("Importing from: " + importFiles);
+            System.out.println("Please wait.");
+            parseFiles(con,builder,importFiles);  // PARSE FILES
+            System.out.println("Operation completed.");
+        }
+        else if(!exportReports.equals("")){
+            String[] exportReportsArgs = exportReports.split(" ");
 
-        parseFiles(con,builder);  // PARSE FILES
+            String companyName = exportReportsArgs[0];
 
-        //ExcelWriter.write(reports); // EXPORT REPORTS
+            ReportService service = new ReportServiceImpl(companyName, con);
+
+            int startMonth = 1;
+            int endMonth = 1;
+            int startYear = Integer.parseInt(exportReportsArgs[1]);
+            int endYear = Integer.parseInt(exportReportsArgs[1]);
+            int startDay = 1;
+            int endDay = 1;
+            YearMonth yearMonthStart;
+            YearMonth yearMonthEnd;
+
+            int Year = Integer.parseInt(exportReportsArgs[1]);
+
+            String[] dateDetails = exportReportsArgs[2].split("");
+            int parameter = Integer.parseInt(dateDetails[0]);
+
+            switch (exportReportsArgs[2]){
+                case "1q":
+                case "2q":
+                case "3q":
+                case "4q":
+                    startMonth = (parameter - 1) * 3 + 1;
+                    endMonth = (parameter + 1 - 1) * 3;
+
+                    yearMonthStart = YearMonth.of(Year,startMonth);
+                    yearMonthEnd = YearMonth.of(Year,endMonth);
+
+                    startDay = yearMonthStart.lengthOfMonth();
+                    endDay = yearMonthEnd.lengthOfMonth();
+                    break;
+                case "1h":
+                case "2h":
+                    startMonth = (parameter - 1) * 6 + 1;
+                    endMonth = (parameter) * 6;
+
+                    yearMonthStart = YearMonth.of(Year,startMonth);
+                    yearMonthEnd = YearMonth.of(Year,endMonth);
+
+                    startDay = yearMonthStart.lengthOfMonth();
+                    endDay = yearMonthEnd.lengthOfMonth();
+                    break;
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                case "5":
+                case "6":
+                case "7":
+                case "8":
+                case "9":
+                case "10":
+                case "11":
+                case "12":
+                    startMonth = Integer.parseInt(exportReportsArgs[2]);
+                    endMonth = Integer.parseInt(exportReportsArgs[2]);
+
+
+                    yearMonthStart = YearMonth.of(Year,startMonth);
+                    yearMonthEnd = YearMonth.of(Year,endMonth);
+
+                    startDay = yearMonthStart.lengthOfMonth();
+                    endDay = yearMonthEnd.lengthOfMonth();
+                    break;
+            }
+            LocalDate startDate = LocalDate.of(startYear,startMonth,1);
+            LocalDate endDate = LocalDate.of(endYear,endMonth,endDay);
+
+            List<ReportPOJO> reports = service.getByPeriod(startDate,endDate).get();
+
+            if(reports.size()==0){
+                System.out.println("No records found by that period.");
+            }else{
+                ExcelWriter.write(reports); // EXPORT REPORTS
+                System.out.println(reports.size() + " records were exported");
+            }
+        }
     }
 
-    private void parseFiles(Connection con, QueryBuilder builder) throws JAXBException, IOException, SQLException, IllegalAccessException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, NoSuchFieldException {
+    private void parseFiles(Connection con, QueryBuilder builder, String filePath) throws JAXBException, IOException, SQLException, IllegalAccessException, ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, NoSuchFieldException {
         FileParser fileParser = new FileParser();
-        List<BaseDailyReport> reports = fileParser.ParseList("daily-reports");
+        List<BaseDailyReport> reports = fileParser.ParseList(filePath);
 
         CompanyService companyService = new CompanyServiceImpl(con);
         //String companyName = companyService.getById(2).get().getCompanyPrefix();
