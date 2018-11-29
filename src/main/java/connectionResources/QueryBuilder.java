@@ -87,7 +87,7 @@ public class QueryBuilder {
 
             queryBuilder.append(" WHERE ")
                     .append(dateWhereOperand1)
-                    .append(" > ?");
+                    .append(" >= ?");
         }
 
         if (dateWhereOperand1 != null) {
@@ -97,7 +97,6 @@ public class QueryBuilder {
                     .append(dateWhereOperand1)
                     .append(" <= ?");
         }
-        System.out.println(queryBuilder.toString());
         return new QueryInfo(queryBuilder.toString(),placeholders);
     }
 
@@ -124,7 +123,7 @@ public class QueryBuilder {
                 .append(") VALUES (")
                 .append(questionMarks.substring(0, questionMarks.length() - 2))
                 .append(')');
-        System.out.println(queryBuilder.toString());
+        //System.out.println(queryBuilder.toString());
         return new QueryInfo(queryBuilder.toString(), placeholders);
     }
 
@@ -162,7 +161,6 @@ public class QueryBuilder {
                 "FROM information_schema.tables \n" +
                 "WHERE table_schema = \"hyperreports\" \n" +
                 "AND table_name = \""+ companyName+"_departments\";";
-        System.out.println(query);
         return query;
     }
 
@@ -244,7 +242,7 @@ public class QueryBuilder {
         String query = "ALTER TABLE " + table +
         " ADD "+ type +"_department_id int," +
         " ADD CONSTRAINT " + "fk_"+type+"_"+ company +"_department_id" + " FOREIGN KEY (" + type + "_department_id" + ") REFERENCES " + company + "_" + type + "s(id);";
-        System.out.println("Pravim query: " + query);
+        //System.out.println("Pravim query: " + query);
         return query;
     }
 

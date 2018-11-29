@@ -7,6 +7,7 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
@@ -20,7 +21,8 @@ public class CSVReportParser extends BaseReportParser {
         CSVDailyReport csvDailyReport = new CSVDailyReport();
         List<Employee> employees = new ArrayList<>();
         try (
-                Reader reader = Files.newBufferedReader(Paths.get("daily-reports/" + FileName));
+                //new File(".."+File.separator+".."+File.separator+"daily-reports"+File.separator+FileName)
+                Reader reader = Files.newBufferedReader(Paths.get(".."+ File.separator+".."+File.separator+"daily-reports"+File.separator+FileName));
                 CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT
                         .withFirstRecordAsHeader()
                         .withIgnoreHeaderCase()

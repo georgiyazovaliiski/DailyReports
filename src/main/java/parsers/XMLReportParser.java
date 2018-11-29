@@ -17,7 +17,7 @@ public class XMLReportParser extends BaseDailyReport{
 
         Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
 
-        Cities cities1 = (Cities) unmarshaller.unmarshal(new File("daily-reports/" + FileName));
+        Cities cities1 = (Cities) unmarshaller.unmarshal(new File(".."+File.separator+".."+File.separator+"daily-reports"+File.separator+FileName));
         XMLDailyReport report = new XMLDailyReport();
         report.setCities(cities1);
 

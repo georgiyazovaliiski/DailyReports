@@ -2,59 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14ef3d26-decd-44f3-84b7-96121225d097" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/excelserialization/ExcelWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/excelserialization/ReportPOJO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/DBModels/Department.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/DBModels/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/DBModels/EmployeeWithDepartment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/DBModels/Report.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/DepartmentRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/EmployeeRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/ReportRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repositories/interfacerepositories/DepartmentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repositories/interfacerepositories/EmployeeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repositories/interfacerepositories/ReportRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/DepartmentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/DepartmentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/EmployeeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/EmployeeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/ReportService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/ReportServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel-report-2018-11-28" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel-report-2018-11-28-11-00-21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel-report-2018-11-28-14-14-59" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel-report-2018-11-28-14-15-59" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel-report-2018-11-28-14-16-56.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel-report-2018-11-28-14-17-19.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel-report-2018-11-28-14-18-38.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel-report-2018-11-28-14-19-52.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel-report-2018-11-28-14-21-29.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel-report-2018-11-28-14-23-14.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel-report-2018-11-28-14-23-31.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel-report-2018-11-28-14-23-54.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel-report-2018-11-28-14-27-34.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel-report-2018-11-28-14-29-01.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel-report-2018-11-28-14-29-21.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel-report-2018-11-28-14-42-34.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel-report-2018-11-28-15-20-34.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel-report-2018-11-28-15-21-33.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel-report-2018-11-28-15-22-37.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FileParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TableChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TableChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/annotation/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/annotation/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Engine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/FileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TableChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/TableChecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/connectionResources/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/connectionResources/Connector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/connectionResources/QueryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/connectionResources/QueryBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/connectionResources/QueryInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/connectionResources/QueryInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/DBModels/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/DBModels/BaseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/DBModels/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/DBModels/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/DBModels/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/DBModels/Company.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/parsers/CSVReportParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/CSVReportParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/baserepositories/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/baserepositories/BaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parsers/XMLReportParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parsers/XMLReportParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repositories/baserepositories/RepositoryBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/baserepositories/RepositoryBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/CityRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/CityRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/CompanyRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/CompanyRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/interfacerepositories/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/interfacerepositories/CityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/interfacerepositories/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/interfacerepositories/CompanyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/CityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/CityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/ReportRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/ReportRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/CityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/CityServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/CompanyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/CompanyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/CompanyServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Connector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/DepartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/DepartmentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/ReportServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ReportServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Engine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Engine.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/QueryBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/QueryInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TableChecker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TableChecker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/DBModels/BaseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/DBModels/BaseEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/DBModels/City.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/DBModels/City.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/DBModels/Company.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/DBModels/Company.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parsers/CSVReportParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/parsers/CSVReportParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Settings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/connectionResources/Connector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/connectionResources/Connector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/connectionResources/QueryBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/connectionResources/QueryBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/parsers/XMLReportParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/parsers/XMLReportParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repositories/baserepositories/RepositoryBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/repositories/baserepositories/RepositoryBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/CityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/CityServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/CompanyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/CompanyServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/DepartmentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/DepartmentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/EmployeeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/ReportServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/ReportServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -82,10 +78,11 @@
     <session id="-447676785">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.102" value="1" />
           <entry key="project.open.time.105" value="1" />
+          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.62" value="2" />
           <entry key="project.open.time.64" value="1" />
           <entry key="project.open.time.69" value="1" />
@@ -94,41 +91,41 @@
           <entry key="project.open.time.78" value="1" />
           <entry key="project.open.time.83" value="1" />
           <entry key="project.open.time.96" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="8" />
-          <entry key="java" value="26185" />
+          <entry key="java" value="30796" />
           <entry key="properties" value="48" />
-          <entry key="xml" value="84" />
+          <entry key="xml" value="335" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="26185" />
+          <entry key="JAVA" value="30796" />
           <entry key="PLAIN_TEXT" value="8" />
           <entry key="Properties" value="48" />
-          <entry key="XML" value="84" />
+          <entry key="XML" value="335" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="5" />
           <entry key="iml" value="3" />
-          <entry key="java" value="295" />
+          <entry key="java" value="320" />
           <entry key="properties" value="3" />
-          <entry key="xml" value="28" />
+          <entry key="xml" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="3" />
-          <entry key="JAVA" value="295" />
+          <entry key="JAVA" value="320" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="Properties" value="3" />
-          <entry key="XML" value="28" />
+          <entry key="XML" value="29" />
         </counts>
       </usages-collector>
     </session>
@@ -138,8 +135,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/ReportRepositoryImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="70" column="48" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
+            <state relative-caret-position="238">
+              <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -147,50 +144,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/excelserialization/ExcelWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="70" column="12" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
+            <state relative-caret-position="425">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/excelserialization/ReportPOJO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="374">
+              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repositories/interfacerepositories/ReportRepository.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/Engine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="13" column="81" selection-start-line="13" selection-start-column="81" selection-end-line="13" selection-end-column="81" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/connectionResources/QueryBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="160" column="24" selection-start-line="160" selection-start-column="24" selection-end-line="160" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Engine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="77" column="48" lean-forward="true" selection-start-line="77" selection-start-column="48" selection-end-line="77" selection-end-column="48" />
+            <state relative-caret-position="-137">
+              <caret line="67" column="22" selection-start-line="67" selection-start-column="12" selection-end-line="67" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getClassFields#0;class#Engine#0" />
@@ -199,29 +172,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/FileParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="20" column="58" lean-forward="true" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/connectionResources/QueryBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="87" column="21" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repositories/baserepositories/RepositoryBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+            <state relative-caret-position="154">
+              <caret line="244" column="16" selection-start-line="244" selection-start-column="10" selection-end-line="244" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -230,10 +185,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/EmployeeServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/parsers/BaseReportParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="68">
+              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/repositories/baserepositories/RepositoryBase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="201" column="18" selection-start-line="201" selection-start-column="12" selection-end-line="201" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#connector#0;class#RepositoryBase#0" />
+                <element signature="method#getClassFields#0;class#RepositoryBase#0" />
+                <element signature="method#instantiateClass#0;class#RepositoryBase#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/CityRepositoryImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="118">
+              <caret line="17" column="16" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/parsers/XMLReportParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="19" column="146" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="146" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/parsers/CSVReportParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -263,6 +263,11 @@
       <find>TUK</find>
       <find>contact</find>
       <find>tuk</find>
+      <find>throws NoSuchMethodException, ClassNotFoundException, InstantiationException, NoSuchFieldException, SQLException, IllegalAccessException, InvocationTargetException, IOException</find>
+      <find>throws NoSuchMethodException, IOException, InstantiationException, SQLException, IllegalAccessException, ClassNotFoundException</find>
+      <find>check</find>
+      <find>system.out</find>
+      <find>system</find>
     </findStrings>
     <replaceStrings>
       <replace>City</replace>
@@ -279,7 +284,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/repositories/SqlSpecification.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/reportcomponents/Company.java" />
         <option value="$PROJECT_DIR$/src/main/java/QueryBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/repositories/BaseRepositoryImpl.java" />
@@ -302,34 +306,35 @@
         <option value="$PROJECT_DIR$/src/main/java/repositories/interfacerepositories/DepartmentRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/EmployeeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/repositories/interfacerepositories/EmployeeRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/EmployeeRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/CompanyRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/DepartmentRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/parsers/CSVReportParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/DBModels/Report.java" />
         <option value="$PROJECT_DIR$/src/main/java/repositories/baserepositories/BaseRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/db.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/excelserialization/ExcelReportPOJO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/excelserialization/ReportPOJO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/ReportService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/models/DBModels/EmployeeWithDepartment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/models/DBModels/Employee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repositories/interfacerepositories/ReportRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/excelserialization/ExcelWriter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/FileParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/connectionResources/QueryBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repositories/baserepositories/RepositoryBase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/EmployeeRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/DepartmentRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/CompanyRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/CityRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/CityServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/CompanyServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/DepartmentServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/services/EmployeeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/db.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/CityRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/connectionResources/Connector.java" />
-        <option value="$PROJECT_DIR$/src/main/java/excelserialization/ExcelReportPOJO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/excelserialization/ReportPOJO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/ReportService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/ReportServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/DBModels/EmployeeWithDepartment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/DBModels/Employee.java" />
-        <option value="$PROJECT_DIR$/src/main/java/repositories/baserepositories/RepositoryBase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/repositories/interfacerepositories/ReportRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/connectionResources/QueryBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/ReportRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/excelserialization/ExcelWriter.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/Engine.java" />
-        <option value="$PROJECT_DIR$/src/main/java/FileParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/ReportServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/connectionResources/Connector.java" />
+        <option value="$PROJECT_DIR$/src/main/java/parsers/XMLReportParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/parsers/CSVReportParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/ReportRepositoryImpl.java" />
       </list>
     </option>
   </component>
@@ -339,11 +344,26 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="PrimeHoldingParser" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="PrimeHoldingParser" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="20" />
-    <option name="width" value="1346" />
-    <option name="height" value="698" />
+    <option name="x" value="-7" />
+    <option name="width" value="1105" />
+    <option name="height" value="745" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -403,16 +423,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PrimeHoldingParser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParserPrimeHolding" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="DBModels" type="462c0819:PsiDirectoryNode" />
+              <item name="parsers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PrimeHoldingParser" type="b2602c69:ProjectViewProjectNode" />
@@ -446,40 +457,39 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="repositories" type="462c0819:PsiDirectoryNode" />
-              <item name="interfacerepositories" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PrimeHoldingParser" type="b2602c69:ProjectViewProjectNode" />
               <item name="ParserPrimeHolding" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543412374147" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543495291952" />
     <property name="last_opened_file_path" value="D:/JJJJ" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.40114942" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\WebProjects\Programista Internship\ParserPrimeHolding\daily-reports" />
-      <recent name="D:\WebProjects\Programista Internship\ParserPrimeHolding" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="excelserialization" />
+      <recent name="" />
+      <recent name="models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\WebProjects\Programista Internship\ParserPrimeHolding\src\main\java\services" />
@@ -491,10 +501,10 @@
       <recent name="models.reportcomponents" />
       <recent name="models" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="excelserialization" />
-      <recent name="" />
-      <recent name="models" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WebProjects\Programista Internship\ParserPrimeHolding\src\main\resources" />
+      <recent name="D:\WebProjects\Programista Internship\ParserPrimeHolding\daily-reports" />
+      <recent name="D:\WebProjects\Programista Internship\ParserPrimeHolding" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -511,9 +521,9 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="utils.Main" />
       <module name="ParserPrimeHolding" />
-      <option name="PROGRAM_PARAMETERS" value="-url GOGO -token GOGO -month 12 -year 2000" />
+      <option name="PROGRAM_PARAMETERS" value="-import daily-reports/2018-01-01-agivu.xml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -546,18 +556,28 @@
       <workItem from="1543219836716" duration="12827000" />
       <workItem from="1543238104157" duration="4006000" />
       <workItem from="1543333423526" duration="2316000" />
-      <workItem from="1543392745211" duration="18391000" />
+      <workItem from="1543392745211" duration="18917000" />
+      <workItem from="1543479861579" duration="15109000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121886000" />
+    <option name="totallyTimeSpent" value="137521000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29954615" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2655068" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -566,11 +586,11 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32850242" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2753623" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.17069243" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32850242" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32850242" />
@@ -586,7 +606,7 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="JSF" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="9" />
+      <window_info anchor="right" id="Maven Projects" order="9" visible="true" weight="0.08547655" />
       <window_info anchor="right" id="CDI" order="10" />
     </layout>
   </component>
@@ -597,13 +617,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/DBModels/BaseEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/models/reports/XMLDailyReport.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -625,13 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TableChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/services/CompanyService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -643,13 +649,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/CityService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -702,31 +701,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/parsers/BaseReportParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/parsers/CSVReportParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/models/reports/CSVDailyReport.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="40" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/DepartmentRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="37" column="33" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -744,41 +722,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/DepartmentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ParserPrimeHolding.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/CityServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/CityRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="15" column="178" selection-start-line="15" selection-start-column="178" selection-end-line="15" selection-end-column="178" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/connectionResources/Connector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="16" column="92" selection-start-line="16" selection-start-column="92" selection-end-line="16" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/db.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="16" />
@@ -792,26 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/CompanyRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="21" column="79" selection-start-line="21" selection-start-column="79" selection-end-line="21" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/CompanyServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/services/ReportService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -819,30 +746,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/ReportServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/excelserialization/ExcelReportPOJO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/excelserialization/ReportPOJO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/excelserialization/ExcelReportPOJO.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/models/DBModels/City.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -861,20 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/EmployeeRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="47" column="51" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/EmployeeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
@@ -906,6 +796,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/CityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/EmployeeRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/DepartmentRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="23" column="97" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/CompanyRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="19" column="106" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="106" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/repositories/interfacerepositories/ReportRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -913,61 +840,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/ReportRepositoryImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/CityServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="70" column="48" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
+        <state relative-caret-position="-544">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/baserepositories/RepositoryBase.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/CompanyServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+        <state relative-caret-position="244">
+          <caret line="87" column="12" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/connectionResources/QueryBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/DepartmentServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="160" column="24" selection-start-line="160" selection-start-column="24" selection-end-line="160" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-144">
+          <caret line="62" column="12" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/excelserialization/ExcelWriter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/EmployeeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="70" column="12" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
+        <state relative-caret-position="297">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/ReportServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="87" column="21" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
+        <state relative-caret-position="221">
+          <caret line="73" column="61" selection-start-line="73" selection-start-column="61" selection-end-line="73" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/FileParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        <state relative-caret-position="68">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Engine.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/TableChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="77" column="48" lean-forward="true" selection-start-line="77" selection-start-column="48" selection-end-line="77" selection-end-column="48" />
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/connectionResources/Connector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/parsers/XMLReportParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="19" column="146" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Engine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-137">
+          <caret line="67" column="22" selection-start-line="67" selection-start-column="12" selection-end-line="67" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getClassFields#0;class#Engine#0" />
@@ -975,10 +940,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FileParser.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/excelserialization/ExcelWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="20" column="58" lean-forward="true" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+        <state relative-caret-position="425">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/excelserialization/ReportPOJO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/connectionResources/QueryBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="244" column="16" selection-start-line="244" selection-start-column="10" selection-end-line="244" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/parsers/BaseReportParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/baserepositories/RepositoryBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="201" column="18" selection-start-line="201" selection-start-column="12" selection-end-line="201" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#connector#0;class#RepositoryBase#0" />
+            <element signature="method#getClassFields#0;class#RepositoryBase#0" />
+            <element signature="method#instantiateClass#0;class#RepositoryBase#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/CityRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repositories/implementedrepositories/ReportRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/parsers/CSVReportParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>

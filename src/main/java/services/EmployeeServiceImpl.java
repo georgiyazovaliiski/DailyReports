@@ -28,28 +28,52 @@ public class EmployeeServiceImpl implements EmployeeService{
     }
 
     @Override
-    public Optional<Employee> getById(int id) throws NoSuchMethodException, ClassNotFoundException, InstantiationException, NoSuchFieldException, SQLException, IllegalAccessException, InvocationTargetException, IOException {
+    public Optional<Employee> getById(int id) {
+        try{
         return employeeRepository.get(id);
+        }catch (Exception e){
+            System.out.println(e.toString());
+            return Optional.empty();
+        }
     }
 
     @Override
-    public Optional<Integer> addEmployee(Employee c) throws NoSuchMethodException, ClassNotFoundException, InstantiationException, NoSuchFieldException, SQLException, IllegalAccessException, InvocationTargetException, IOException {
+    public Optional<Integer> addEmployee(Employee c) {
+        try{
         return employeeRepository.insert(c);
+        }catch (Exception e){
+            System.out.println(e.toString());
+            return Optional.empty();
+        }
+
     }
 
     @Override
-    public Optional<List<Employee>> getAll() throws NoSuchMethodException, ClassNotFoundException, InstantiationException, NoSuchFieldException, SQLException, IllegalAccessException, InvocationTargetException, IOException {
-        return employeeRepository.get();
+    public Optional<List<Employee>> getAll() {
+        try{
+            return employeeRepository.get();
+        }catch (Exception e){
+            System.out.println(e.toString());
+            return Optional.empty();
+        }
     }
 
     @Override
-    public void updateEmployee(Employee c) throws NoSuchMethodException, ClassNotFoundException, InstantiationException, NoSuchFieldException, SQLException, IllegalAccessException, InvocationTargetException, IOException {
-        employeeRepository.update(c);
+    public void updateEmployee(Employee c) {
+        try{
+            employeeRepository.update(c);
+        }catch (Exception e){
+            System.out.println(e.toString());
+        }
     }
 
     @Override
-    public void deleteEmployee(int id) throws NoSuchMethodException, ClassNotFoundException, InstantiationException, NoSuchFieldException, SQLException, IllegalAccessException, InvocationTargetException, IOException {
-        employeeRepository.delete(id);
+    public void deleteEmployee(int id) {
+        try{
+            employeeRepository.delete(id);
+        }catch (Exception e){
+            System.out.println(e.toString());
+        }
     }
 
     @Override

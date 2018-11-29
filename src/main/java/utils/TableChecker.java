@@ -1,3 +1,5 @@
+package utils;
+
 import connectionResources.QueryBuilder;
 
 import java.sql.*;

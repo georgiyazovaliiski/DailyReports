@@ -28,28 +28,52 @@ public class DepartmentServiceImpl implements DepartmentService{
     }
 
     @Override
-    public Optional<Department> getById(int id) throws NoSuchMethodException, ClassNotFoundException, InstantiationException, NoSuchFieldException, SQLException, IllegalAccessException, InvocationTargetException, IOException {
-        return departmentRepository.get(id);
+    public Optional<Department> getById(int id) {
+        try {
+            return departmentRepository.get(id);
+        }catch (Exception e){
+            System.out.println(e.toString());
+            return Optional.empty();
+        }
     }
 
     @Override
-    public Optional<Integer> addDepartment(Department c) throws NoSuchMethodException, ClassNotFoundException, InstantiationException, NoSuchFieldException, SQLException, IllegalAccessException, InvocationTargetException, IOException {
+    public Optional<Integer> addDepartment(Department c) {
+        try{
         return departmentRepository.insert(c);
+        }catch (Exception e){
+            System.out.println(e.toString());
+            return Optional.empty();
+        }
     }
 
     @Override
-    public Optional<List<Department>> getAll() throws NoSuchMethodException, ClassNotFoundException, InstantiationException, NoSuchFieldException, SQLException, IllegalAccessException, InvocationTargetException, IOException {
+    public Optional<List<Department>> getAll() {
+        try{
         return departmentRepository.get();
+        }catch (Exception e){
+            System.out.println(e.toString());
+            return Optional.empty();
+        }
     }
 
     @Override
-    public void updateDepartment(Department c) throws NoSuchMethodException, ClassNotFoundException, InstantiationException, NoSuchFieldException, SQLException, IllegalAccessException, InvocationTargetException, IOException {
-        departmentRepository.update(c);
+    public void updateDepartment(Department c) {
+        try{
+            departmentRepository.update(c);
+        }catch (Exception e){
+            System.out.println(e.toString());
+        }
+
     }
 
     @Override
-    public void deleteDepartment(int id) throws NoSuchMethodException, ClassNotFoundException, InstantiationException, NoSuchFieldException, SQLException, IllegalAccessException, InvocationTargetException, IOException {
-        departmentRepository.delete(id);
+    public void deleteDepartment(int id) {
+        try{
+            departmentRepository.delete(id);
+        }catch (Exception e){
+            System.out.println(e.toString());
+        }
     }
 
     @Override

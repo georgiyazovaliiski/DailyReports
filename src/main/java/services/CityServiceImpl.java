@@ -13,13 +13,21 @@ import java.util.Optional;
 public class CityServiceImpl implements CityService {
     private CityRepository cityRepository;
 
-    public CityServiceImpl(String CityName) throws NoSuchMethodException, IOException, InstantiationException, SQLException, IllegalAccessException, ClassNotFoundException {
-        this.cityRepository = new CityRepositoryImpl(CityName);
+    public CityServiceImpl(String CityName) {
+        try {
+            this.cityRepository = new CityRepositoryImpl(CityName);
+        }catch (Exception e){
+            System.out.println(e.toString());
+        }
     }
 
-    public CityServiceImpl(String CityName, Connection connection) throws NoSuchMethodException, IOException, InstantiationException, SQLException, IllegalAccessException, ClassNotFoundException {
-        this.cityRepository = new CityRepositoryImpl(CityName);
-        this.cityRepository.setConnection(connection);
+    public CityServiceImpl(String CityName, Connection connection) {
+        try {
+            this.cityRepository = new CityRepositoryImpl(CityName);
+            this.cityRepository.setConnection(connection);
+        }catch (Exception e){
+            System.out.println(e.toString());
+        }
     }
 
     @Override

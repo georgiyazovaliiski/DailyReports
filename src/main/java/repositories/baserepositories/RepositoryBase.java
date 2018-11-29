@@ -54,129 +54,153 @@ public abstract class RepositoryBase<T>{
         }
     }
 
-    public Optional<T> get(int id) throws SQLException, NoSuchMethodException, IllegalAccessException, IOException, ClassNotFoundException, InstantiationException, NoSuchFieldException, InvocationTargetException, NoSuchMethodException {
-        String tableName = this.tableName;
-        QueryInfo query = builder.select(new String[]{"*"},tableName,"Id");
-        //System.out.println(query.getQuery());
-        PreparedStatement stmnt = con.prepareStatement(query.getQuery(),
-                Statement.RETURN_GENERATED_KEYS);
+    public Optional<T> get(int id){
+        try {
+            String tableName = this.tableName;
+            QueryInfo query = builder.select(new String[]{"*"}, tableName, "Id");
+            //System.out.println(query.getQuery());
+            PreparedStatement stmnt = con.prepareStatement(query.getQuery(),
+                    Statement.RETURN_GENERATED_KEYS);
 
-        stmnt.setInt(1,id);
+            stmnt.setInt(1, id);
 
-        ResultSet rs = stmnt.executeQuery();
-        ResultSetMetaData rsmd = rs.getMetaData();
-
-
-        T Entity = instantiateClass();
-        //System.out.println("TUK: " + Entity);
-        if(rs.next()){
-            List<Field> fields = getClassFields(new ArrayList<Field>(),typeParameterClass);
-
-            for (Field field : fields) {
-                field.setAccessible(true);
-                field.set(Entity, rs.getObject(field.getName(), field.getType()));
-            }
-        }
-        return Optional.ofNullable(Entity);
-    }
-
-    public Optional<List<T>> get() throws SQLException, IOException, ClassNotFoundException{
-        QueryInfo query = builder.select(new String[]{"*"},tableName);
-
-        System.out.println(query.getQuery());
-        return null;
-    }
-
-    public Optional<Integer> insert(T Entity) throws SQLException, IOException, ClassNotFoundException, IllegalAccessException {
+            ResultSet rs = stmnt.executeQuery();
+            ResultSetMetaData rsmd = rs.getMetaData();
 
 
-        List<Field> fields = getClassFields(new ArrayList<Field>(),Entity.getClass());
+            T Entity = instantiateClass();
+            //System.out.println("TUK: " + Entity);
+            if (rs.next()) {
+                List<Field> fields = getClassFields(new ArrayList<Field>(), typeParameterClass);
 
-        System.out.println("FIELD LIST SIZE: " + fields.size());
-
-        for (int i = 0; i < fields.size(); i++) {
-            Field field = fields.get(i);
-            field.setAccessible(true);
-            if(field.getName().contains("department")){
-                System.out.println("FIELDCHE:" + field.get(Entity).toString());
-                if(field.get(Entity).toString().equals("0") || field.get(Entity).toString().equals(0)){
-                    fields.remove(field);
-                    i--;
+                for (Field field : fields) {
+                    field.setAccessible(true);
+                    field.set(Entity, rs.getObject(field.getName(), field.getType()));
                 }
             }
+            return Optional.ofNullable(Entity);
         }
-        System.out.println("FIELD LIST SIZE AFTER: " + fields.size());
+        catch (Exception e){
+            System.out.println(e);
+            return Optional.empty();
+        }
+    }
 
-        QueryInfo query = builder.insert(
-                this.tableName,
-                fields
-        );
+    public Optional<List<T>> get() {
+        try {
+            QueryInfo query = builder.select(new String[]{"*"}, tableName);
 
-        PreparedStatement stmnt = con.prepareStatement(query.getQuery(),
-                Statement.RETURN_GENERATED_KEYS);
+            return null;
+        }catch (Exception e){
+            System.out.println(e);
+            return null;
+        }
+    }
 
-        int counter = 1;
-        for (Field field : Entity.getClass().getDeclaredFields()) {
-            String fieldName = field.getName();
-            field.setAccessible(true);
-            if(fields.contains(field)) {
+    public Optional<Integer> insert(T Entity){
+
+        try {
+            List<Field> fields = getClassFields(new ArrayList<Field>(), Entity.getClass());
+
+            //System.out.println("FIELD LIST SIZE: " + fields.size());
+
+            for (int i = 0; i < fields.size(); i++) {
+                Field field = fields.get(i);
+                field.setAccessible(true);
+                if (field.getName().contains("department")) {
+                    //System.out.println("FIELDCHE:" + field.get(Entity).toString());
+                    if (field.get(Entity).toString().equals("0") || field.get(Entity).toString().equals(0)) {
+                        fields.remove(field);
+                        i--;
+                    }
+                }
+            }
+            //System.out.println("FIELD LIST SIZE AFTER: " + fields.size());
+
+            QueryInfo query = builder.insert(
+                    this.tableName,
+                    fields
+            );
+
+            PreparedStatement stmnt = con.prepareStatement(query.getQuery(),
+                    Statement.RETURN_GENERATED_KEYS);
+
+            int counter = 1;
+            for (Field field : Entity.getClass().getDeclaredFields()) {
+                String fieldName = field.getName();
+                field.setAccessible(true);
+                if (fields.contains(field)) {
+                    stmnt.setString(counter, field.get(Entity).toString());
+                    counter++;
+                }
+            }
+            //System.out.println("TUK! : " + stmnt);
+            boolean executed = stmnt.execute();
+
+            ResultSet rs = stmnt.getGeneratedKeys();
+
+            int Id = 0;
+            if (rs.next()) {
+                Id = rs.getInt(1);
+            }
+
+            Optional result = Optional.ofNullable(Id);
+            return result;
+        }catch (Exception e){
+            System.out.println("An error came along: " + e.toString());
+            return Optional.empty();
+        }
+    }
+
+    public void update(T Entity) {
+        try {
+            List<Field> fields = new ArrayList<>();
+            getClassFields(fields, typeParameterClass);
+            List<String> fieldNames = new ArrayList<>();
+            for (Field field : fields) {
+                fieldNames.add(field.getName());
+            }
+            String[] names = new String[fieldNames.size()];
+            fieldNames.toArray(names);
+            QueryInfo query = this.builder.update(names, this.tableName, "id");
+
+            PreparedStatement stmnt = con.prepareStatement(query.getQuery(),
+                    Statement.RETURN_GENERATED_KEYS);
+
+            ResultSet rs = stmnt.getGeneratedKeys();
+
+            int counter = 1;
+            for (Field field : fields) {
+                String fieldName = field.getName();
+                field.setAccessible(true);
+                //System.out.println(field.getName() + " : " + field.get(Entity));
                 stmnt.setString(counter, field.get(Entity).toString());
                 counter++;
             }
+
+            Field idField = fields.get(fields.size() - 1);
+            //System.out.println(idField);
+
+            stmnt.setInt(counter, (Integer) idField.get(Entity));
+
+            //System.out.println(stmnt);
+
+            if (stmnt.execute()) {
+                //System.out.println("Updated successfully!");
+            }
+            ;
         }
-        System.out.println("TUK! : " + stmnt);
-        boolean executed = stmnt.execute();
-
-        ResultSet rs = stmnt.getGeneratedKeys();
-
-        int Id = 0;
-        if(rs.next()){
-            Id = rs.getInt(1);
+        catch (Exception e){
+            System.out.println("An error came along: " + e.toString());
         }
-
-        Optional result = Optional.ofNullable(Id);
-        return result;
     }
 
-    public void update(T Entity) throws SQLException, NoSuchFieldException, IOException, ClassNotFoundException, IllegalAccessException, NoSuchFieldException {
-        List<Field> fields = new ArrayList<>();
-        getClassFields(fields,typeParameterClass);
-        List<String> fieldNames = new ArrayList<>();
-        for (Field field : fields) {
-            fieldNames.add(field.getName());
+    public void delete(int id){
+        try {
+            //System.out.println("Not implemented yet");
+        }catch (Exception e){
+            System.out.println("An error came along: " + e.toString() + " Please try again");
         }
-        String[] names = new String[fieldNames.size()];
-        fieldNames.toArray(names);
-        QueryInfo query = this.builder.update(names,this.tableName,"id");
-
-        PreparedStatement stmnt = con.prepareStatement(query.getQuery(),
-                Statement.RETURN_GENERATED_KEYS);
-
-        ResultSet rs = stmnt.getGeneratedKeys();
-
-        int counter = 1;
-        for (Field field : fields) {
-            String fieldName = field.getName();
-            field.setAccessible(true);
-            //System.out.println(field.getName() + " : " + field.get(Entity));
-            stmnt.setString(counter,field.get(Entity).toString());
-            counter++;
-        }
-
-        Field idField = fields.get(fields.size() - 1);
-        //System.out.println(idField);
-
-        stmnt.setInt(counter, (Integer) idField.get(Entity));
-
-        //System.out.println(stmnt);
-
-        if(stmnt.execute()){
-            //System.out.println("Updated successfully!");
-        };
-    }
-
-    public void delete(int id) throws SQLException, IOException, ClassNotFoundException{
-        System.out.println("Not implemented yet");
     }
 
     protected List<Field> getClassFields(List<Field> fields, Class<?> tClass) {
@@ -189,10 +213,10 @@ public abstract class RepositoryBase<T>{
     }
 
     private T instantiateClass() throws ClassNotFoundException, IllegalAccessException, InvocationTargetException, InstantiationException, NoSuchMethodException {
-        Class<?> someClass = Class.forName(typeParameterClass.getName());
-        Class<? extends BaseEntity> creatorClass = someClass.asSubclass(BaseEntity.class);
-        Constructor<? extends BaseEntity> creatorCtor = creatorClass.getConstructor();
-        T Entity = (T) creatorCtor.newInstance((Object[]) null);
-        return Entity;
+            Class<?> someClass = Class.forName(typeParameterClass.getName());
+            Class<? extends BaseEntity> creatorClass = someClass.asSubclass(BaseEntity.class);
+            Constructor<? extends BaseEntity> creatorCtor = creatorClass.getConstructor();
+            T Entity = (T) creatorCtor.newInstance((Object[]) null);
+            return Entity;
     }
 }

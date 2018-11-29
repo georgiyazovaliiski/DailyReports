@@ -1,3 +1,5 @@
+package utils;
+
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import connectionResources.Connector;
@@ -21,13 +23,10 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
 import java.time.LocalDate;
-import java.time.Year;
 import java.time.YearMonth;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-import java.util.Scanner;
-
 
 
 public class Engine {

@@ -1,4 +1,5 @@
-import models.DBModels.Report;
+package utils;
+
 import models.reportcomponents.Company;
 import models.reports.BaseDailyReport;
 import parsers.CSVReportParser;

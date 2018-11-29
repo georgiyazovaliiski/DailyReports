@@ -14,42 +14,81 @@ import java.util.Optional;
 public class CompanyServiceImpl implements CompanyService{
     private CompanyRepository companyRepository;
 
-    public CompanyServiceImpl() throws NoSuchMethodException, IOException, InstantiationException, SQLException, IllegalAccessException, ClassNotFoundException {
-        companyRepository = new CompanyRepositoryImpl();
+    public CompanyServiceImpl() {
+        try {
+            companyRepository = new CompanyRepositoryImpl();
+        }catch (Exception e){
+            System.out.println(e.toString());
+        }
     }
 
-    public CompanyServiceImpl(Connection connection) throws NoSuchMethodException, IOException, InstantiationException, SQLException, IllegalAccessException, ClassNotFoundException {
-        companyRepository = new CompanyRepositoryImpl();
-        companyRepository.setConnection(connection);
+    public CompanyServiceImpl(Connection connection) {
+        try {
+            companyRepository = new CompanyRepositoryImpl();
+            companyRepository.setConnection(connection);
+        }catch (Exception e){
+            System.out.println(e.toString());
+        }
+    }
+
+
+    @Override
+    public Optional<Company> getById(int id) {
+        try{
+            return companyRepository.get(id);
+        }
+        catch (Exception e){
+            System.out.println(e.toString());
+            return Optional.empty();
+        }
     }
 
     @Override
-    public Optional<Company> getById(int id) throws NoSuchMethodException, ClassNotFoundException, InstantiationException, NoSuchFieldException, SQLException, IllegalAccessException, InvocationTargetException, IOException {
-        return companyRepository.get(id);
+    public Optional<Integer> addCompany(Company c) {
+        try {
+            return companyRepository.insert(c);
+        }catch (Exception e) {
+            System.out.println(e.toString());
+            return Optional.empty();
+        }
     }
 
     @Override
-    public Optional<Integer> addCompany(Company c) throws NoSuchMethodException, ClassNotFoundException, InstantiationException, NoSuchFieldException, SQLException, IllegalAccessException, InvocationTargetException, IOException {
-        return companyRepository.insert(c);
+    public Optional<List<Company>> getAll() {
+        try {
+            return companyRepository.get();
+        }catch (Exception e) {
+            System.out.println(e.toString());
+            return Optional.empty();
+        }
     }
 
     @Override
-    public Optional<List<Company>> getAll() throws NoSuchMethodException, ClassNotFoundException, InstantiationException, NoSuchFieldException, SQLException, IllegalAccessException, InvocationTargetException, IOException {
-        return companyRepository.get();
-    }
-
-    @Override
-    public void updateCompany(Company c) throws NoSuchMethodException, ClassNotFoundException, InstantiationException, NoSuchFieldException, SQLException, IllegalAccessException, InvocationTargetException, IOException {
+    public void updateCompany(Company c) {
+        try{
         companyRepository.update(c);
+        }catch (Exception e) {
+            System.out.println(e.toString());
+        }
     }
 
     @Override
-    public void deleteCompany(int id) throws NoSuchMethodException, ClassNotFoundException, InstantiationException, NoSuchFieldException, SQLException, IllegalAccessException, InvocationTargetException, IOException {
+    public void deleteCompany(int id) {
+        try{
         companyRepository.delete(id);
+        }catch (Exception e) {
+            System.out.println(e.toString());
+        }
     }
 
+
     @Override
-    public Optional<Company> getByCompanyPrefix(String companyPrefix) throws SQLException, IllegalAccessException {
-        return companyRepository.getByPrefix(companyPrefix);
+    public Optional<Company> getByCompanyPrefix(String companyPrefix){
+        try{
+            return companyRepository.getByPrefix(companyPrefix);
+        }catch (Exception e) {
+            System.out.println(e.toString());
+            return Optional.empty();
+        }
     }
 }

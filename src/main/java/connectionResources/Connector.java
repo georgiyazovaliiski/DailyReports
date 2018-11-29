@@ -1,11 +1,13 @@
 package connectionResources;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import utils.Main;
 
 import java.beans.PropertyVetoException;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -16,7 +18,7 @@ public class Connector {
 
     public void createConnection() throws SQLException, IOException, ClassNotFoundException {
         Properties props = new Properties();
-        FileInputStream fis = new FileInputStream("src/main/db.properties");
+        InputStream fis = Main.class.getClassLoader().getResourceAsStream("db.properties");
         props.load(fis);
 
         // create the connection now

@@ -24,9 +24,7 @@ public class ReportRepositoryImpl extends RepositoryBase<Report> implements Repo
     public Optional<List<ReportPOJO>> getByPeriod(LocalDate beginDate, LocalDate endDate) throws SQLException {
         String company = tableName.split("_")[0];
 
-
-
-        System.out.println(builder.checkForDepartmentsTable(tableName));
+        //System.out.println(builder.checkForDepartmentsTable(tableName));
         PreparedStatement stmnts = con.prepareStatement(builder.checkForDepartmentsTable(company));
         ResultSet rs2 = stmnts.executeQuery();
         int size = 0;
